@@ -1,6 +1,6 @@
 from datetime import datetime
 
-'''
+
 records = [
     {'source': '48-996355555', 'destination': '48-666666666', 'end': 1564610974, 'start': 1564610674},
     {'source': '41-885633788', 'destination': '41-886383097', 'end': 1564506121, 'start': 1564504821},
@@ -15,12 +15,14 @@ records = [
     {'source': '48-996383697', 'destination': '41-885633788', 'end': 1564505021, 'start': 1564504821},
     {'source': '48-996383697', 'destination': '41-885633788', 'end': 1564626000, 'start': 1564647600}
 ]
-'''
 
+
+'''
 records = [
     {'source': '48-996355555', 'destination': '48-666666666', 'end': 1564610974, 'start': 1564610674},
     {'source': '41-885633788', 'destination': '41-886383097', 'end': 1564506121, 'start': 1564504821}
 ]
+'''
 
 
 def classify_by_phone_number(records):
@@ -84,7 +86,9 @@ def classify_by_phone_number(records):
         
         print()
 
-    return relatorio
+    relatorio_ordenado = sorted(relatorio, key=lambda k: k['total']) 
+
+    return relatorio_ordenado
 
 
 def main():
